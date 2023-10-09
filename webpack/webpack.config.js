@@ -16,6 +16,19 @@ module.exports =
                 exclude: /node_modules/,
                 loader: "babel-loader",
             },
+            {
+                test: /\.css$/,
+                use:['style-loader','css-loader']
+            },
+            {
+                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,        // webpack 4 uses file loader for image loading, webpack 5 uses asset module for that
+                type:'asset/resource',
+            },
+            {
+                test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,    // webpack 4 uses specific loaders, webpack 5 uses asset modules.
+                type:"asset/inline"
+            }
+
         ],
     },
     resolve: {
