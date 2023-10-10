@@ -1,7 +1,11 @@
 import './styles.css'
 import Image from '../assets/download.png'
 import Logo from '../assets/download.svg'
+import jsonData from '../package.json'
 const App = () => {
+  const name = 'hehe'
+  console.log(typeof jsonData)
+  console.log(name)
   return (
     <>
       <h1>
