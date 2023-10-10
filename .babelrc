@@ -8,6 +8,17 @@
         }
         ],
         "@babel/preset-typescript"
+    ],
+
+    "plugins":[
+        [
+            "@babel/plugin-transform-runtime",  // allows async-await feature
+            {
+                "regenerator":true
+            }
+            
+            
+        ]
     ]
 
     
